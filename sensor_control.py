@@ -324,7 +324,7 @@ class SensorControl(Tk):
             self.act_end_btn['state'] = NORMAL
             self.act_start_btn['state'] = DISABLED
         elif index == 1:
-            label = f'1 {self.activity.get()} start'
+            label = f'1 {self.activity1.get()} start'
             self.act_end_btn1['state'] = NORMAL
             self.act_start_btn1['state'] = DISABLED
         for client in self.clients:
@@ -347,7 +347,7 @@ class SensorControl(Tk):
             self.act_end_btn['state'] = DISABLED
             self.act_start_btn['state'] = NORMAL
         elif index == 1:
-            label = f'1 {self.activity.get()} end'
+            label = f'1 {self.activity1.get()} end'
             self.act_end_btn1['state'] = DISABLED
             self.act_start_btn1['state'] = NORMAL
         for client in self.clients:
@@ -372,7 +372,7 @@ class SensorControl(Tk):
                 else:
                     messagebox.showwarning("Sensor Error",
                                            f"{SENSOR_ERROR}-{i+1}")
-        if sen_count == len(self.clients) and self.age[0] is not 'User':
+        if sen_count == len(self.clients) and self.age[0] != 'User':
             if not self.clients[0].is_started:
                 self.start_sec = dt.today()
                 self.date = self.start_sec.strftime(DATE_FORMAT)
@@ -436,7 +436,7 @@ class SensorControl(Tk):
         self.kinect_client.publish(topic='kinect', msg=msg, qos=0)
         self.sound_client.publish(topic='sound', msg=msg, qos=0)
         for index, item in enumerate(self.video_activity_time):
-            time = item[0] * 33
+            time = round(item[0] * 33.333)
             label = item[1]
             s_h, s_m, s_s, ms = get_time_1(time)
             s_s_t = str((s_s + SUB_DURATION) % 60).zfill(2)
