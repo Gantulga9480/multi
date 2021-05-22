@@ -10,9 +10,9 @@ SENSORS = [["sensors/sensor1/data", 1, 1],
            ["sensors/sensor5/data", 5, 1],
            ["sensors/sensor6/data", 6, 1],
            ["sensors/sensor7/data", 7, 1],
-           ["sensors/sensor8/data", 8, 0],
+           ["sensors/sensor8/data", 10, 0],
            ["sensors/sensor9/data", 9, 1],
-           ["sensors/sensor10/data", 10, 1]]
+           ["sensors/sensor10/data", 8, 1]]
 
 # Command list
 START = 'start'
@@ -29,13 +29,96 @@ SAVE_PATH = "data/multi"
 CACHE_PATH = "cache"
 
 # Add or remove activity here
-ACTIVITIES = ["Dressing", "Having rest", "Watching TV", 'Reading',
-              'Working computer', 'Standing',
-              'Exercising', 'Walking in room',
-              'Meal preparation', 'Eating', 'Wash dishes',
-              'Clean room', 'Sleeping', 'Falling',
-              'Respiration', 'Walking', 'Enter room',
-              'Standing and talking']
+# A list First person
+ACTIVITIES = ["Dressing",
+              "Having rest",
+              "Watching TV",
+		      "Reading",
+		      "Talk to phone",
+		      'Working computer',
+		      'Enter room' ,
+		      'Standing',
+		      'Exercising',
+		      'Walking in room',
+		      'Wash dishes',
+		      'Clean room',
+		      'Sleeping']
+#A list Second person
+ACTIVITIES1 = ['Dressing ',
+               'Walking in room',
+               'Having rest',
+               'Reading',
+               'Standing',
+               'Working computer',
+               'Talk to phone',
+               'Exercising',
+               'Clean room',
+               'Sleeping',
+               'Wash dishes',
+               'Watching TV',
+               'Enter room']
+
+# B list First person
+#ACTIVITIES = ["Dressing",
+#             "Watching TV",
+#             "Having rest",
+#		      'Wash dishes',
+#		      'Exercising',
+#		      'Walking in room',
+#		      'Standing',
+#		      "Reading",
+#		      'Clean room',
+#		      'Working computer',
+#		      'Sleeping',
+#		      'Falling',
+#		      'Respiration',
+#		      'Enter room',
+#             'Talk to phone']
+# B list Second person
+#ACTIVITIES1 = ['Standing',
+#               'Dressing ',
+#               'Watching TV',
+#               'Reading',
+#               'Working computer',
+#               'Sleeping',
+#               'Exercising',
+#               'Walking in room',
+#               'Wash dishes',
+#               'Clean room',
+#               'Having rest',
+#               'Talk to phone',
+#               'Falling',            
+#               'Respiration',
+#               'Enter room']
+
+# C list First person
+#ACTIVITIES = ["Dressing",
+#              'Walking in room',
+#              "Having rest",
+#    	      "Reading",
+#		      'Standing',
+#	          'Working computer',
+#		      'Exercising',
+#		      'Clean room',
+#		      'Wash dishes',
+#		      'Sleeping',
+#		      "Watching TV",
+#		      'Talk to phone',
+ #             'Enter room']
+# C list Second person
+#ACTIVITIES1 = ['Dressing ',
+#               'Clean room',
+#               'Watching TV',
+ #              'Working computer',
+ #              'Wash dishes',
+ #              'Walking in room',
+ #              'Exercising',
+ #              'Standing',
+ #              'Having rest',
+ #             'Reading',
+ #             'Sleeping',
+ #              'Talk to phone',           
+ #              'Enter room']
 
 # Const
 SUB_DURATION = 2

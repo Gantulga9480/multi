@@ -209,7 +209,7 @@ class SensorControl(Tk):
         self.weight1_label.grid(row=3, column=1)
 
         self.activity1_menu = ttk.Combobox(self.sensor_frame3,
-                                          value=ACTIVITIES,
+                                          value=ACTIVITIES1,
                                           textvariable=self.activity1)
         self.activity1_menu.current(0)
         self.activity1_menu.config(state="readonly", width=15)
@@ -410,7 +410,7 @@ class SensorControl(Tk):
             messagebox.showerror('ERROR', f'Insert user info or check sensors')
             self.is_streaming = False
             self.stream_stop(send=False)
-            self.stream_reset(delete=True)
+            # self.stream_reset(delete=True)
 
     def stream_stop(self, send=True):
         self.is_streaming = False
@@ -454,7 +454,7 @@ class SensorControl(Tk):
         self.rgb_out.release()
         self.depth_out.release()
         try:
-            os.mkdir(f'{SAVE_PATH}/{self.date}')
+            os.makedirs(f'{SAVE_PATH}/{self.date}')
         except FileExistsError:
             pass
         move(f'{CACHE_PATH}/{self.date}/{self.time}', f'{SAVE_PATH}/{self.date}')
